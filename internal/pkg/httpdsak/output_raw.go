@@ -20,7 +20,7 @@ func (c *Client) outputRaw(_ context.Context, res *http.Response) error {
 			return fmt.Errorf("failed to read response body: %w", err)
 		}
 		for _, b := range p[:n] {
-			if !unicode.IsPrint(rune(b)) {
+			if !unicode.IsGraphic(rune(b)) {
 				fmt.Fprintln(c.out, "Output contains binary data, not showing it to preserve terminal")
 				return nil
 			}

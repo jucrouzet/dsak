@@ -32,6 +32,8 @@ func (c *Client) output(ctx context.Context, res *http.Response) error {
 		err = c.outputHighlighted(ctx, res, "xml")
 	case "text/html":
 		err = c.outputHighlighted(ctx, res, "html")
+	case "text/x-markdown", "text/markdown":
+		err = c.outputHighlighted(ctx, res, "markdown")
 	case "image/png", "image/jpeg", "image/gif":
 		err = c.outputImage(ctx, res)
 	default:
