@@ -43,7 +43,7 @@ go-lint: go-format go-vet linter-check
 
 build: go-check
 	@echo ">> building binaries ..."
-	@./crosscompile.sh
+	@go build -ldflags "$(LDFLAGS)" -o build/$(DSAK) main.go
 
 
 lint: go-lint

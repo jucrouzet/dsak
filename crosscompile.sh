@@ -37,10 +37,6 @@
 #
 PLATFORMS="darwin/amd64"
 PLATFORMS="$PLATFORMS darwin/arm64"
-#PLATFORMS="$PLATFORMS windows/amd64 windows/386" ->
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:197:38: undefined: syscall.Stat_t
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:218:36: undefined: syscall.Stat_t
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:243:37: undefined: syscall.Stat_t
 PLATFORMS="$PLATFORMS linux/amd64 linux/386"
 PLATFORMS="$PLATFORMS linux/ppc64 linux/ppc64le"
 PLATFORMS="$PLATFORMS linux/mips64 linux/mips64le"
@@ -48,18 +44,6 @@ PLATFORMS="$PLATFORMS freebsd/amd64"
 PLATFORMS="$PLATFORMS netbsd/amd64"
 PLATFORMS="$PLATFORMS openbsd/amd64"
 PLATFORMS="$PLATFORMS dragonfly/amd64"
-
-# PLATFORMS="$PLATFORMS plan9/amd64 plan9/386" ->
-# # github.com/BourgeoisBear/rasterm
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:197:38: undefined: syscall.Stat_t
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:218:36: undefined: syscall.Stat_t
-# ../../../../go/pkg/mod/github.com/!bourgeois!bear/rasterm@v1.0.3/term_misc.go:243:37: undefined: syscall.Stat_t
-# # github.com/spf13/afero
-# ../../../../go/pkg/mod/github.com/spf13/afero@v1.11.0/const_win_unix.go:22:23: undefined: syscall.EBADFD
-
-#PLATFORMS="$PLATFORMS solaris/amd64" # as of go1.3 ->
-# # github.com/jucrouzet/dsak/cmd
-# cmd/httpCert.go:164:21: undefined: netroute.New
 
 # ARMBUILDS lists the platforms that are currently supported.  From this list
 # we generate the following architectures:

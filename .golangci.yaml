@@ -1,0 +1,83 @@
+run:
+  timeout: 5m
+issues:
+  exclude-use-default: true
+  max-issues-per-linter: 0
+  max-same-issues: 0
+output:
+  format: line-number
+  print-issued-lines: false
+linters:
+  enable:
+    - bodyclose
+    - dogsled
+    - durationcheck
+    - errcheck
+    - errorlint
+#    - exhaustive
+    - exportloopref
+    - forcetypeassert
+    - gocyclo
+    - gocritic
+    - godot
+    - gofmt
+    - goimports
+    - gomoddirectives
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - importas
+    - ineffassign
+    - makezero
+    - misspell
+    - nestif
+    - nilerr
+    - nolintlint
+    - prealloc
+    - predeclared
+    - promlinter
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
+    - staticcheck
+    - testpackage
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+    - whitespace
+linters-settings:
+  gocyclo:
+    # minimal code complexity to report, 30 by default (but we recommend 10-20)
+    min-complexity: 20
+  goconst:
+    min-len: 2
+    min-occurrences: 2
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - performance
+      - style
+    disabled-checks:
+      - dupImport # https://github.com/go-critic/go-critic/issues/845
+      - ifElseChain
+      - whyNoLint
+      - wrapperFunc
+      - docStub
+      - paramTypeCombine
+      - unnamedResult
+      - sloppyReassign
+      - commentedOutCode
+      - hugeParam
+  exhaustive:
+    # Program elements to check for exhaustiveness.
+    # Default: [ switch ]
+    check:
+      - switch
+      - map
+    explicit-exhaustive-map: true
