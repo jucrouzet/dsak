@@ -10,6 +10,7 @@ All the tools he needs in one cli.
 
 
 ## Usage:
+```
   dsak [flags]
   dsak [command]
 
@@ -32,3 +33,4 @@ Flags:
       --verbose         Run command verbosely
 
 Use "dsak [command] --help" for more information about a command.
+```
